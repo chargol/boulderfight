@@ -11,4 +11,7 @@
 |
 */
 
+// Participant - Routes
+Route::resource('participant', 'ParticipantController');
+
 Route::get('/', 'WelcomeController@index');
