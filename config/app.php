@@ -145,6 +145,11 @@ return [
 		'Boulderfight\Providers\EventServiceProvider',
 		'Boulderfight\Providers\RouteServiceProvider',
 
+		/**
+		 * Third-party Service Provider
+		 */
+		'Laracasts\Generators\GeneratorsServiceProvider',
+
 	],
 
 	/*
