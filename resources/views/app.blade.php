@@ -8,7 +8,9 @@
 </head>
 <body>
 	
-	<h1>Test</h1>
+	<div class="container">
+		@yield('app.content')
+	</div>
 	
 </body>
 </html>
