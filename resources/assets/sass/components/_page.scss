@@ -1,0 +1,10 @@
+/**
+*
+* "page"-Component
+*
+**/
+
+@include component(page) {
+	height: 100%;
+	background-color: $clPrimary;
+}

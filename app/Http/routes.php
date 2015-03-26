@@ -12,6 +12,6 @@
 */
 
 // Participant - Routes
-Route::resource('participant', 'ParticipantController');
+Route::resource('participants', 'ParticipantController');
 
 Route::get('/', 'WelcomeController@index');
