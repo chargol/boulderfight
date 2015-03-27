@@ -19,6 +19,7 @@ class CreateParticipantsTable extends Migration {
 			$table->string('lastname');
 			$table->string('gender', 1);
 			$table->date('birthday');
+			$table->integer('points');
 			$table->timestamps();
 		});
 	}

@@ -5,15 +5,19 @@
 	<div class="container">
 		<div class="col-sm-8 col-sm-offset-2 text-center">
 			<form class="form-lined" action="{{ route('participants.store') }}" method="POST">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 				<div class="form-group">
 					<label for="firstname" class="control-label">Vorname</label>
 					<input type="text" class="form-control text-center" id="firstname" name="firstname">
+					
+					@include ('errors.form', ['attribute' => 'firstname']);
 				</div>
 
 				<div class="form-group">
 					<label for="lastname" class="control-label">Nachname</label>
 					<input type="text" class="form-control text-center" id="lastname" name="lastname">
+					@include ('errors.form', ['attribute' => 'lastname']);
 				</div>
 
 				<label for="birthday" class="control-label">Geburtstag</label>
@@ -30,18 +34,9 @@
 					<div class="col-sm-4 text-center">
 						<label for="birthday-month" class="control-label">Monat</label>
 						<select id="birthday-month" name="birthday-month" class="form-control text-center">
-							<option value="1">Januar</option>
-							<option value="2">Februar</option>
-							<option value="3">März</option>
-							<option value="4">April</option>
-							<option value="5">Mai</option>
-							<option value="6">Juni</option>
-							<option value="7">Julo</option>
-							<option value="8">August</option>
-							<option value="9">September</option>
-							<option value="10">Oktober</option>
-							<option value="11">November</option>
-							<option value="12">Dezember</option>
+							@for ($i = 1; $i <= 12; $i++)
+								<option value="{{ $i }}">{{ $i }}</option>
+							@endfor
 						</select>
 					</div>
 					<div class="col-sm-4 text-center">
@@ -69,9 +64,11 @@
 
 				<div class="form-group">
 					<div class="col-sm-6 col-sm-offset-3">
-						<label for="routes" class="control-label">Getoppte Routen</label>
-						<input type="text" class="form-control text-center" id="routes" name="routes" placeholder="1-100">
+						<label for="points" class="control-label">Getoppte Routen</label>
+						<input type="text" class="form-control text-center" id="points" name="points" placeholder="1-100">
+						@include ('errors.form', ['attribute' => 'points'])
 					</div>
+
 				</div>
 
 				<div class="form-group">
