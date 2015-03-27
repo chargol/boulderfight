@@ -6,8 +6,9 @@
 
 	
 	<link rel="stylesheet" type="text/css" href="/css/app.css">
-	<link rel="stylesheet" type="text/css" href="/css/select2.css">
-	<link rel="stylesheet" type="text/css" href="/css/datedropper.css">
+	<link rel="stylesheet" type="text/css" href="/css/pickadate/default.css">
+	<link rel="stylesheet" type="text/css" href="/css/pickadate/default.date.css">
+
 </head>
 
 <body id="csstyle">
@@ -17,18 +18,32 @@
 	</div>
 
 	<script type="text/javascript" src="/js/jquery.js"></script>
-	<script type="text/javascript" src="/js/select2.js"></script>
-	<script type="text/javascript" src="/js/datedropper.js"></script>
+	<script type="text/javascript" src="/js/picker.js"></script>
+	<script type="text/javascript" src="/js/picker.date.js"></script>
 
 	<script type="text/javascript">
-	  $('select').select2();
-	  $('#birthday').dateDropper({
-	  	format: "d/m/Y",
-	  	lang: "de",
-	  	minYear: 1935,
-	  	maxYear: 2010
-	  });
+		// $('#birthday').pickadate({
+		// 	// Strings and translations
+		// 	monthsFull: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+		// 	monthsShort: ['Jan', 'Feb', 'März', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+		// 	weekdaysFull: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+		// 	weekdaysShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
+		// 	showMonthsShort: undefined,
 
+		// 	// Buttons
+		// 	today: 'Heute',
+		// 	clear: 'Reset',
+		// 	close: 'Abbrechen',
+
+		// 	// Accessibility labels
+		// 	labelMonthNext: 'Nächster Monat',
+		// 	labelMonthPrev: 'Vorheriger Monat',
+		// 	labelMonthSelect: 'Wähle einen Monat',
+		// 	labelYearSelect: 'Wähle ein Jahr',
+
+		// 	// Formats
+		// 	format: 'dd/mm/yyyy',
+		// });
 	</script>
 	
 </body>

@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+var bowerPath = 'resources/assets/bower_components/';
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -13,13 +15,12 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
 	// jQuery
-	mix.copy('resources/assets/bower_components/jquery/dist/jquery.js', 'public/js/');
-	// Select2-Plugin
-	mix.copy('resources/assets/bower_components/select2-dist/select2.css', 'public/css/')
-		.copy('resources/assets/bower_components/select2-dist/select2.js', 'public/js/');
-	// Date-Dropper-Plugin
-	mix.copy('resources/assets/bower_components/datedropper/datedropper.css', 'public/css/')
-		.copy('resources/assets/bower_components/datedropper/datedropper.js', 'public/js/');
+	mix.copy(bowerPath + 'jquery/dist/jquery.js', 'public/js/');
+	// Pickadate-Plugin
+	mix.copy(bowerPath + 'pickadate/lib/themes/default.css', 'public/css/pickadate/');
+	mix.copy(bowerPath + 'pickadate/lib/themes/default.date.css', 'public/css/pickadate/');
+	mix.copy(bowerPath + 'pickadate/lib/picker.js', 'public/js/');
+	mix.copy(bowerPath + 'pickadate/lib/picker.date.js', 'public/js/');
     
     mix.rubySass('app.scss');
 });
