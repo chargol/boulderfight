@@ -42,6 +42,10 @@ Route::get('mitmachen', [
 	'uses' => 'ParticipantController@create'
 ]);
 
+Route::get('/eifelblock', function (){
+	return redirect()->route('participants.create');
+});
+
 Route::get('/', function (){
 	return redirect()->route('participants.create');
 });
