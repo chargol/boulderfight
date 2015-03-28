@@ -64,7 +64,7 @@
 
 				<div class="form-group">
 					<div class="col-sm-6 col-sm-offset-3">
-						<label for="points" class="control-label">Getoppte Routen</label>
+						<label for="points" class="control-label">Getopte Routen</label>
 						<input type="text" class="form-control text-center" id="points" name="points" placeholder="1-100">
 						@include ('errors.form', ['attribute' => 'points'])
 					</div>
