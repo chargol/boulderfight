@@ -1,0 +1,43 @@
+/**
+*
+* "navigation"-Component
+*
+**/
+
+@include component(navigation) {
+	
+	height: 80px;
+	border-bottom: 2px solid darken($clPrimary, 10);
+	background-color: darken($clPrimary, 5);
+
+	.logo { margin: 13px 20px; }
+
+	ul {
+		list-style-type: none;
+		li { 
+			display: inline-block;
+			a {
+				display: block;
+				padding: 27px 25px;
+				height: 78px;
+				color: darken($clPaper, 10);
+				font-size: 15px;
+				font-family: $ffPrimary;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+		
+				&:hover { 
+					text-decoration: none; 
+					background-color: lighten($clPrimary, 5);
+				}
+				&:focus { 
+					border: none; outline: none; 
+					text-decoration: none;
+				}
+
+				&:visited { text-decoration: none; }
+			}
+		}
+	}
+}

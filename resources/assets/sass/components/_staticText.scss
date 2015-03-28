@@ -1,0 +1,13 @@
+/**
+*
+* "staticText"-Component
+*
+**/
+
+@include component(staticText) {
+	color: $clPrimary;
+	font-size: 24px;
+	font-family: $ffPrimary;
+	font-weight: 100;
+
+}

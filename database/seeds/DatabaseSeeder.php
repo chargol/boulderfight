@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Database\Seeder;
+use Boulderfight\Participant;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder {
 
@@ -14,7 +15,9 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		// $this->call('UserTableSeeder');
+		Participant::truncate();
+
+		$this->call('ParticipantsTableSeeder');
 	}
 
 }

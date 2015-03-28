@@ -11,13 +11,13 @@
 					<label for="firstname" class="control-label">Vorname</label>
 					<input type="text" class="form-control text-center" id="firstname" name="firstname">
 					
-					@include ('errors.form', ['attribute' => 'firstname']);
+					@include ('errors.form', ['attribute' => 'firstname'])
 				</div>
 
 				<div class="form-group">
 					<label for="lastname" class="control-label">Nachname</label>
 					<input type="text" class="form-control text-center" id="lastname" name="lastname">
-					@include ('errors.form', ['attribute' => 'lastname']);
+					@include ('errors.form', ['attribute' => 'lastname'])
 				</div>
 
 				<label for="birthday" class="control-label">Geburtstag</label>
@@ -68,7 +68,6 @@
 						<input type="text" class="form-control text-center" id="points" name="points" placeholder="1-100">
 						@include ('errors.form', ['attribute' => 'points'])
 					</div>
-
 				</div>
 
 				<div class="form-group">

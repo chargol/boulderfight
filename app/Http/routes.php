@@ -12,6 +12,36 @@
 */
 
 // Participant - Routes
-Route::resource('participants', 'ParticipantController');
+Route::get('auswertung/erwachsene', [
+	'as' => 'participants.adults',
+	'uses' => 'ParticipantController@adults'
+]);
 
-Route::get('/', 'WelcomeController@index');
+Route::get('auswertung/jugend', [
+	'as' => 'participants.youths',
+	'uses' => 'ParticipantController@youths'
+]);
+
+Route::post('mitmachen/aktualisieren/{id}', [
+	'as' => 'participants.storeCheck',
+	'uses' => 'ParticipantController@storeCheck'
+]);
+
+Route::post('mitmachen', [
+	'as' => 'participants.store',
+	'uses' => 'ParticipantController@store'
+]);
+
+Route::get('mitmachen/aktualisieren/{id}', [
+	'as' => 'participants.check',
+	'uses' => 'ParticipantController@check'
+]);
+
+Route::get('mitmachen', [
+	'as' => 'participants.create',
+	'uses' => 'ParticipantController@create'
+]);
+
+Route::get('/', function (){
+	return redirect()->route('participants.create');
+});

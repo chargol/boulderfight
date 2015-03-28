@@ -11,7 +11,9 @@
 
 <body id="csstyle">
 	
+	
 	<div class="page">
+		@include('partials.navigation')
 		@yield('app.content')
 	</div>
 
