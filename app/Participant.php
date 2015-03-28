@@ -19,12 +19,12 @@ class Participant extends Model {
 
 	public function scopeAdult($query)
 	{
-		return $query->where('birthday', '<', Carbon::now()->subYears(18));
+		return $query->where('birthday', '<', Carbon::now()->subYears(16));
 	}
 
 	public function scopeYouth($query)
 	{
-		return $query->where('birthday', '>', Carbon::now()->subYears(18));
+		return $query->where('birthday', '>', Carbon::now()->subYears(16));
 	}
 
 	public function scopeOrderBest($query)

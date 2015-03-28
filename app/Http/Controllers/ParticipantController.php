@@ -16,7 +16,7 @@ class ParticipantController extends Controller {
 		$participant->points = $request['points'];
 		$participant->save();
 
-		if ($participant->age() < 18) {
+		if ($participant->age() < 16) {
 			return redirect()->route('participants.youths');	
 		} 
 		
@@ -42,10 +42,9 @@ class ParticipantController extends Controller {
 
 	public function youths()
 	{
-		$females = Participant::female()->youth()->orderBest()->get();
-		$males = Participant::male()->youth()->orderBest()->get();
+		$participants = Participant::youth()->orderBest()->get();
 
-		return view('participants.index', compact('males', 'females'));
+		return view('participants.youth', compact('participants'));
 
 	}
 	
@@ -82,7 +81,7 @@ class ParticipantController extends Controller {
 
 		$participant = Participant::create($request->all());
 
-		if ($participant->age() < 18) {
+		if ($participant->age() < 16) {
 			return redirect()->route('participants.youths');	
 		} 
 		
