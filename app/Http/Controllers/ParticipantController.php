@@ -16,7 +16,7 @@ class ParticipantController extends Controller {
 		$participant->points = $request['points'];
 		$participant->save();
 
-		if ($participant->age() < 17) {
+		if ($participant->age() < 16) {
 			return redirect()->route('participants.youths');	
 		} 
 		
@@ -81,7 +81,7 @@ class ParticipantController extends Controller {
 
 		$participant = Participant::create($request->all());
 
-		if ($participant->age() < 17) {
+		if ($participant->age() < 16) {
 			return redirect()->route('participants.youths');	
 		} 
 		
