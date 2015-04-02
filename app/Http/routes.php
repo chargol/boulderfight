@@ -39,13 +39,14 @@ Route::get('mitmachen/aktualisieren/{id}', [
 
 Route::get('mitmachen', [
 	'as' => 'participants.create',
-	'uses' => 'ParticipantController@create'
+	// 'uses' => 'ParticipantController@create'
+	'uses' => 'ParticipantController@adults'
 ]);
 
 Route::get('/eifelblock', function (){
-	return redirect()->route('participants.create');
+	return redirect()->route('participants.adults');
 });
 
 Route::get('/', function (){
-	return redirect()->route('participants.create');
+	return redirect()->route('participants.adults');
 });

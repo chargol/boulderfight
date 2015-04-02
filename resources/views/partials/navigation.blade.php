@@ -8,7 +8,7 @@
         
         
           <ul class="col-sm-10">
-            <li><a href="{{ route('participants.create') }}">Punkte eintragen</a></li>
+            {{-- <li><a href="{{ route('participants.create') }}">Punkte eintragen</a></li> --}}
             <li><a href="{{ route('participants.adults') }}">Damen/Herren</a></li>
             <li><a href="{{ route('participants.youths') }}">Jugend</a></li>
           </ul>
